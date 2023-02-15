@@ -18,8 +18,11 @@ public class DataPipeline {
 		this.dataEvaluator = dataEvaluator;
 	}
 	
-	public Data getSmallestDifferenceData(String separator, String filePath, int idColumnIndex, int valueHighColumnIndex, int valueLowColumnIndex) throws IOException {
-		List<Data> data = dataReader.readData(separator, filePath, idColumnIndex, valueHighColumnIndex, valueLowColumnIndex);
+	public Data getSmallestDifferenceData(String filePath) {
+		List<Data> data;
+		try {
+			data = dataEvaluator.readData(dataReader.readData(filePath));
+		
 		
 		Data lowestAverageData = null;
 		double lowestAverage = Double.MAX_VALUE;
@@ -32,6 +35,11 @@ public class DataPipeline {
 		}
 		
 		return lowestAverageData;
+		
+		} catch (IOException e1) {	
+			e1.printStackTrace();
+			return new Data("none", -1);
+		}
 	}
 
 }
