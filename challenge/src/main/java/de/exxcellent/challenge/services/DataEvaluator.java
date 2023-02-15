@@ -12,7 +12,7 @@ import de.exxcellent.challenge.model.Data;
 
 public class DataEvaluator {
 	
-	private static final Logger LOGGER = Logger.getLogger(DataPipeline.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DataEvaluator.class.getName());
 	
 	private String separator;
 	private int idColumnIndex;
