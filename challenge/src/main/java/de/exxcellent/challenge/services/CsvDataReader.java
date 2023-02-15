@@ -16,6 +16,14 @@ public class CsvDataReader implements DataReader {
 		this.fileName = fileName;
 		this.separator = separator;
 	}
+	
+	public CsvDataReader() {
+		super();
+		this.fileName ="";
+		this.separator =";";
+	}
+
+
 
 
 
@@ -31,6 +39,13 @@ public class CsvDataReader implements DataReader {
 		}
 		
 		return rows;
+	}
+
+
+
+	@Override
+	public String getFormat() {
+		return "csv";
 	}
 
 }
