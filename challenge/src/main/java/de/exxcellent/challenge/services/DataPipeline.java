@@ -21,7 +21,7 @@ public class DataPipeline {
 	public Data getSmallestDifferenceData(String filePath) {
 		List<Data> data;
 		try {
-			data = dataEvaluator.readData(dataReader.readData(filePath));
+			data = dataEvaluator.evaluateData(dataReader.readData(filePath));
 		
 		
 		Data lowestAverageData = null;

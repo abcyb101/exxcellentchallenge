@@ -27,8 +27,6 @@ public class CsvDataReader implements DataReader {
 		return rowList;
 	}
 
-
-
 	@Override
 	public String getFormat() {
 		return "csv";
