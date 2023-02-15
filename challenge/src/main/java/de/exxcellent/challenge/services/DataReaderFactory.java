@@ -1,9 +1,11 @@
 package de.exxcellent.challenge.services;
 
+import de.exxcellent.challenge.model.InputFormat;
+
 public class DataReaderFactory {
-	public static DataReader create(String format) {
+	public static DataReader create(InputFormat format) {
 		switch(format) {
-			case "csv":
+			case CSV:
 				return new CsvDataReader();
 			//implement other formats here
 			default:

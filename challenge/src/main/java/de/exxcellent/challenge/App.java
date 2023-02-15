@@ -10,6 +10,7 @@ import java.util.List;
 import com.sun.tools.javac.Main;
 
 import de.exxcellent.challenge.model.Data;
+import de.exxcellent.challenge.model.InputFormat;
 import de.exxcellent.challenge.services.DataEvaluator;
 import de.exxcellent.challenge.services.DataPipeline;
 import de.exxcellent.challenge.services.DataReader;
@@ -34,7 +35,7 @@ public final class App {
     	String filePathFootball = "src/main/resources/de/exxcellent/challenge/football.csv";
     	
     	DataReaderFactory dataReaderFactory = new DataReaderFactory();
-    	DataReader dataReader = dataReaderFactory.create("csv");
+    	DataReader dataReader = dataReaderFactory.create(InputFormat.CSV);
     	
     	DataEvaluator dataEvalWeather = new DataEvaluator(";", 0, 1, 2);
     	DataEvaluator dataEvalFootball = new DataEvaluator(";", 0, 5, 6);
