@@ -37,6 +37,7 @@ public class DataEvaluator {
 				double value2 = Double.parseDouble(values[valueLowColumnIndex]);
 				double diff = Math.abs(value1 - value2);
 				dataList.add(new Data(identifier, diff));
+	
 			} catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
 				LOGGER.log(Level.SEVERE, "Error: " + e.getMessage());
 				e.printStackTrace();

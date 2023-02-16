@@ -37,8 +37,8 @@ public final class App {
     	DataReaderFactory dataReaderFactory = new DataReaderFactory();
     	DataReader dataReader = dataReaderFactory.create(InputFormat.CSV);
     	
-    	DataEvaluator dataEvalWeather = new DataEvaluator(";", 0, 1, 2);
-    	DataEvaluator dataEvalFootball = new DataEvaluator(";", 0, 5, 6);
+    	DataEvaluator dataEvalWeather = new DataEvaluator(",", 0, 1, 2);
+    	DataEvaluator dataEvalFootball = new DataEvaluator(",", 0, 5, 6);
     	
     	DataPipeline dataPipelineWeather = new DataPipeline(dataReader, dataEvalWeather);
     	DataPipeline dataPipelineFootball = new DataPipeline(dataReader, dataEvalFootball);
